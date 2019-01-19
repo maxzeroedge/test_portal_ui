@@ -16,6 +16,7 @@
 import TextComponent from "@/components/sub_components/TextComponent";
 import CodeComponent from "@/components/sub_components/CodeComponent";
 import TextAreaComponent from "@/components/sub_components/TextAreaComponent";
+import CodeAreaComponent from "@/components/sub_components/CodeAreaComponent";
 import RadioComponent from "@/components/sub_components/RadioComponent";
 export default {
     name: 'DynamicComponent',
@@ -23,6 +24,7 @@ export default {
         TextComponent,
         CodeComponent,
         TextAreaComponent,
+        CodeAreaComponent,
         RadioComponent
     },
     props: {
