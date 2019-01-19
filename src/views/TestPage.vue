@@ -1,9 +1,8 @@
 <template>
-    <v-container>
+    <div>
         <Header/>
-        {{JSON.stringify(pageJson)}}
         <dynamic-component :pageJson="pageJson"/>
-    </v-container>
+    </div>
 </template>
 
 <script>
@@ -22,6 +21,7 @@
         },
         computed: {
             pageJson(){
+                console.log(this.$store.state.pageJson)
                 return this.$store.state.pageJson
             }
         }

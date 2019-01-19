@@ -21,8 +21,8 @@ export default new Vuex.Store({
 		},
 		updatePageJson(state, args){
 			if(args && args.pageJson){
-				console.log(args.pageJson)
-				state.pageJson = args.pageJson.pageJson
+				// console.log(args.pageJson)
+				state.pageJson = args.pageJson
 				if(args.pageJson.title){
 					state.page_title = args.pageJson.title
 				}

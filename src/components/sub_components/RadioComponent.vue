@@ -17,7 +17,7 @@
             }
         },
         props: {
-            items : {
+            contents : {
                 type: Array,
                 default: () => []
             },
