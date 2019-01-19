@@ -1,9 +1,11 @@
 <template>
 	<v-container>
-		<v-card>
-            <v-radio-group v-model="radioGroup" @change="$emit('callback', radioGroup)">
-				<v-radio v-for="item in contents" :key="Math.random()*1000 + item.id" :label="item.label" :value="item.value"></v-radio>
-			</v-radio-group>
+		<v-card flat>
+            <v-layout>
+                <v-radio-group v-model="radioGroup" @change="$emit('callback', radioGroup)">
+                    <v-radio v-for="item in contents" :key="Math.random()*1000 + item.id" :label="item.label" :value="item.value"></v-radio>
+                </v-radio-group>
+            </v-layout>
         </v-card>
 	</v-container>
 </template>
@@ -31,7 +33,7 @@
                 }
             },
             id: {
-                type: String,
+                type: [String, Number],
                 default: ''
             }
         }
