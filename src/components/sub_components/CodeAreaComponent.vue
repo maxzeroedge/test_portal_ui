@@ -1,19 +1,29 @@
 <template>
 	<v-container>
-		<codemirror v-model="code" :options="cmOption"></codemirror>
+		<!-- <codemirror v-model="code" :options="cmOption"></codemirror> -->
+		<v-textarea
+			:ref="name"
+			:id="name"
+			:name="name"
+			:label="label"
+			hint="Enter your text here"
+            v-model="code"
+		></v-textarea>
 	</v-container>
 </template>
 
 <script>
-
+	import CodeMirror from 'codemirror/src/codemirror';
+	import javascript from 'codemirror/mode/javascript/javascript';
 	export default {
 		name: "CodeAreaComponent",
 		components: {},
 		data() {
-			var vm = this;
+			let vm = this;
 			return {
-				code: '',
-				mode: 'text/javascript',
+				name: ('input-' + Math.random()*1000).replace('.', '_'),
+				code: vm.content,
+				mode: 'javascript',
 				cmOption: {
 					"tabSize": 4,
 					"styleActiveLine": true,
@@ -32,6 +42,18 @@
 					}
 				}
 			};
+		},
+		watch: {
+			code(data){
+				console.log(data);
+			}
+		},
+		mounted(){
+			let vm = this;
+			CodeMirror.fromTextArea(vm.$refs[vm.name].$el, {
+				value: vm.content,
+				lineNumbers: true
+			});
 		},
 		props: {
 			label: {
@@ -62,7 +84,7 @@
 			}
 		},
 		beforeDestroy() {
-			this.editor.destroy();
+			// this.editor.destroy();
 		}
 	};
 </script>

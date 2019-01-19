@@ -5,6 +5,7 @@
                 <text-component v-if="pageData.type == 'TextComponent'" v-bind="pageData" />
                 <code-component v-if="pageData.type == 'CodeComponent'" v-bind="pageData" />
                 <text-area-component v-if="pageData.type == 'TextAreaComponent'" v-bind="pageData"/>
+                <code-area-component v-if="pageData.type == 'CodeAreaComponent'" v-bind="pageData"/>
                 <radio-component v-if="pageData.type == 'RadioComponent'" v-bind="pageData" />
                 <dynamic-component v-if="pageData.type == 'DynamicComponent'" v-bind="pageData"/>
             </v-layout>

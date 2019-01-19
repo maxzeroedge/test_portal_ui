@@ -43,6 +43,11 @@ export default {
         {
             "id": 4,
             "type": "TextAreaComponent"
+        },
+        {
+            "id": 5,
+            "type": "CodeAreaComponent",
+            "content": "Test"
         }
     ]
 }
