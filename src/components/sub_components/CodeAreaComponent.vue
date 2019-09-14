@@ -83,7 +83,7 @@
 			}
 		},
 		beforeDestroy() {
-			// this.editor.destroy();
+			this.editor ? this.editor.destroy() : '';
 		}
 	};
 </script>
