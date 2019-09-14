@@ -4,8 +4,8 @@
         <v-toolbar-title>{{page_title}}</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-            <v-btn flat>{{name}}</v-btn>
-            <v-btn flat>{{time}}</v-btn>
+            <v-btn text>{{name}}</v-btn>
+            <v-btn text>{{time}}</v-btn>
         </v-toolbar-items>
     </v-toolbar>
 </template>

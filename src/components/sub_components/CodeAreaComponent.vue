@@ -1,15 +1,14 @@
 <template>
 	<v-container>
 		<!-- <codemirror v-model="code" :options="cmOption"></codemirror> -->
-		<v-textarea
+		<textarea
 			:ref="name"
 			:id="name"
 			:name="name"
 			:label="label"
 			hint="Enter your text here"
-            v-model="code"
-			:value="content"
-		></v-textarea>
+            v-model="content"
+		></textarea>
 	</v-container>
 </template>
 
@@ -50,7 +49,7 @@
 		},
 		mounted(){
 			let vm = this;
-			CodeMirror.fromTextArea(vm.$refs[vm.name].$el, {
+			CodeMirror.fromTextArea(vm.$refs[vm.name], {
 				value: vm.content,
 				lineNumbers: true
 			});
