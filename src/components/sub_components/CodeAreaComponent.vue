@@ -8,6 +8,7 @@
 			:label="label"
 			hint="Enter your text here"
             v-model="code"
+			:value="content"
 		></v-textarea>
 	</v-container>
 </template>
@@ -18,8 +19,7 @@
 	export default {
 		name: "CodeAreaComponent",
 		components: {},
-		data() {
-			let vm = this;
+		data(vm) {
 			return {
 				name: ('input-' + Math.random()*1000).replace('.', '_'),
 				code: vm.content,
@@ -45,7 +45,7 @@
 		},
 		watch: {
 			code(data){
-				console.log(data);
+				//console.log(data);
 			}
 		},
 		mounted(){
